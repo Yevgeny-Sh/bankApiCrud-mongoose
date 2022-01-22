@@ -17,7 +17,7 @@ router.post("/api/users", async (req, res) => {
     res.status(400).send(err);
   }
 });
-app.get("*", (req, res) => {
+router.get("*", (req, res) => {
   res.sendFile(path.resolve(publicPath, "index.html"));
 });
 
